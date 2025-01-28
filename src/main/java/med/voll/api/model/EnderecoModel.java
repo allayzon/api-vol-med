@@ -2,11 +2,8 @@ package med.voll.api.model;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import med.voll.api.domain.Endereco;
 
-@Getter
 @AllArgsConstructor
 //@NoArgsConstructor
 @Embeddable
@@ -15,10 +12,10 @@ public class EnderecoModel {
     private String logradouro;
     private String bairro;
     private String cep;
-    private String numero;
-    private String complemento;
     private String cidade;
     private String uf;
+    private String numero;
+    private String complemento;
 
     public EnderecoModel() {
     }
@@ -55,5 +52,33 @@ public class EnderecoModel {
         if (dados.numero() != null) {
             this.numero = dados.numero();
         }
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
     }
 }
