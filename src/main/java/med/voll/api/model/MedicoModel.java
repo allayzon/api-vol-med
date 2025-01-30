@@ -3,9 +3,9 @@ package med.voll.api.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import med.voll.api.domain.AtualizarMedico;
-import med.voll.api.domain.Especialidade;
-import med.voll.api.domain.Medico;
+import med.voll.api.domain.medico.AtualizarMedico;
+import med.voll.api.domain.medico.Especialidade;
+import med.voll.api.domain.medico.Medico;
 
 @Table(name="medicos")
 @Entity(name="Medico")

@@ -1,4 +1,4 @@
-package med.voll.api.domain;
+package med.voll.api.domain.medico;
 
 import med.voll.api.model.MedicoModel;
 

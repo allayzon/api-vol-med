@@ -2,7 +2,7 @@ package med.voll.api.model;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
-import med.voll.api.domain.Endereco;
+import med.voll.api.domain.endereco.Endereco;
 
 @AllArgsConstructor
 //@NoArgsConstructor
