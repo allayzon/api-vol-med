@@ -1,9 +1,11 @@
 package med.voll.api.domain.paciente;
 
+import med.voll.api.model.PacienteModel;
+
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf) {
 
-    public DadosListagemPaciente(Paciente paciente) {
-        this(paciente.getId(), paciente.getNome(), paciente.getEmail(), paciente.getCpf());
+    public DadosListagemPaciente(PacienteModel pacienteModel) {
+        this(pacienteModel.getId(), pacienteModel.getNome(), pacienteModel.getEmail(), pacienteModel.getCpf());
     }
 
 }

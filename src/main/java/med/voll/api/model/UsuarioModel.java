@@ -1,10 +1,7 @@
 package med.voll.api.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,9 +11,6 @@ import java.util.List;
 
 @Table(name="usuarios")
 @Entity(name="Usuario")
-@Getter
-@AllArgsConstructor
-@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class UsuarioModel implements UserDetails {
 
@@ -61,24 +55,25 @@ public class UsuarioModel implements UserDetails {
         return true;
     }
 
-//    public UsuarioModel() {
-//    }
-//    public UsuarioModel(Long id, String login, String senha) {
-//        this.id = id;
-//        this.login = login;
-//        this.senha = senha;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
+    public UsuarioModel() {
+    }
+
+    public UsuarioModel(Long id, String login, String senha) {
+        this.id = id;
+        this.login = login;
+        this.senha = senha;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     public String getLogin() {
         return login;
     }
-//
-//    public String getSenha() {
-//        return senha;
-//    }
+
+    public String getSenha() {
+        return senha;
+    }
 
 }

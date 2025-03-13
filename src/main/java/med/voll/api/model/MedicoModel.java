@@ -45,6 +45,7 @@ public class MedicoModel {
             this.telefone = dados.telefone();
         }
         if (dados.endereco() != null) {
+            System.out.println();
             this.endereco.atualizarEndereco(dados.endereco());
         }
 

@@ -1,15 +1,16 @@
-package med.voll.api.domain.paciente;
+package med.voll.api.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import med.voll.api.model.EnderecoModel;
+import med.voll.api.domain.paciente.DadosAtualizacaoPaciente;
+import med.voll.api.domain.paciente.DadosCadastroPaciente;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Paciente {
+public class PacienteModel {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,10 +24,10 @@ public class Paciente {
 
     private Boolean ativo;
 
-    public Paciente() {
+    public PacienteModel() {
     }
 
-    public Paciente(DadosCadastroPaciente dados) {
+    public PacienteModel(DadosCadastroPaciente dados) {
         this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();
